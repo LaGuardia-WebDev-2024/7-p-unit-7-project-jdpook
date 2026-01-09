@@ -4,15 +4,30 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-
-
+var pupilSize;
+pupilSize=45
+var eyeColor;
+eyeColor=255
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
   
+  //eyeball
+  fill(eyeColor,eyeColor,eyeColor)
+  ellipse(430,220,90,90);
+  fill(0,0,0)
+  ellipse(430,220,pupilSize,pupilSize);
+  //falsies
+  strokeWeight(5)
+  noFill()
+  arc(430,220,180,100,radians(40),radians(180));
+  fill(0,0,0)
+  //mole
+  point(100,100);
 
-
+//pupilSize+=1
+eyeColor=random(0,255);
 
 
 
