@@ -8,13 +8,18 @@ var pupilSize;
 pupilSize=45
 var eyeColor;
 eyeColor=255
+eyeColorr = 0;
+eyeColorb = 0;
+eyeColorg =0;
+var moleSize;
+moleSize=random(1,10)
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
   
   //eyeball
-  fill(eyeColor,eyeColor,eyeColor)
+  fill(eyeColorr,eyeColorb,eyeColorg)
   ellipse(430,220,90,90);
   fill(0,0,0)
   ellipse(430,220,pupilSize,pupilSize);
@@ -24,7 +29,8 @@ draw = function(){
   arc(430,220,180,100,radians(40),radians(180));
   fill(0,0,0)
   //mole
-  point(100,100);
+  strokeWeight(moleSize);
+  point(289,300);
 
 //pupilSize+=1
 eyeColor=random(0,255);
@@ -32,7 +38,13 @@ eyeColor=random(0,255);
 
 
   //Show x y values when mousepressed
-  if(mousePressed){showXYPositions();}
+  if(mousePressed){
+    showXYPositions();
+    moleSize=random(1,10);
+    eyeColorr = random(0,255)
+    eyeColorb = random(0,255)
+    eyeColorg = random(0,255)
+    }
 
 }
 
