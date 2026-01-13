@@ -5,7 +5,7 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var pupilSize;
-pupilSize=45
+pupilSize=10
 var eyeColor;
 eyeColor=255
 eyeColorr = 0;
@@ -32,7 +32,7 @@ draw = function(){
   strokeWeight(moleSize);
   point(289,300);
 
-//pupilSize+=1
+if(pupilSize<50){pupilSize+=.1}
 eyeColor=random(0,255);
 
 
